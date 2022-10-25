@@ -1,7 +1,7 @@
 Vue.js
 
- *Axios
- *Router
- *Bootstrap
- *Vuetify
+ **Axios
+ **Router
+ **Bootstrap
+ **Vuetify
  
