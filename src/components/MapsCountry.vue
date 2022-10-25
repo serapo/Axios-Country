@@ -1,15 +1,12 @@
 <template>
   <div>
    
-    <p>{{ind}}</p>
-    
- yhy
   </div>
  </template>
  
  <script>
  export default {
- props :["ind"],
+ props :["secilenLocation"],
  computed: {
    nedProp() {
      return this.ind
@@ -19,8 +16,8 @@
    console.log(this.ind)
  },
  watch: {
-   ind() {
-     console.log("aaaa")
+   golocation(maps,ind) {
+     console.log(maps,ind)
    }
  }
  }

@@ -1,29 +1,36 @@
 <template>
 <div class="hello">
     <v-container>
-        <v-row  >
-            <v-col >
-               <v-card class="d-flex justify-center align-center ">
-                <ul v-for="(item, index) in items.splice(0,20)" :key="index"> <li>
-                  <img :src="item.flags.svg"/>
-                  {{item.name.common}}
-          
-                </li>
-              </ul>
-               </v-card>
+            <v-col>
+                <v-row  >
+                <ul v-for="(item, index) in items.splice(0,10)" :key="index"> 
+                    <li><img :src="item.flags.svg"/></li>
+                    <li><span>Country : </span>{{item.name.common}}</li>
+                    <li><span>Region : </span>{{item.region}}</li>
+                    <br>
+                    <li><a type="button" class="btn btn-primary" :href="item.maps.googleMaps" target="_blank">Go Location</a></li>
+                    <maps-country-vue :secilenLocation="item.maps.googleMaps"></maps-country-vue>
+                </ul>
+              
+            </v-row>
             </v-col>
-        </v-row>
     </v-container>
 </div>
 </template>
 
 <script>
 import axios from "axios";
+import MapsCountryVue from "./MapsCountry.vue";
 export default {
     name: "App",
+    components:{
+        MapsCountryVue,
+    },
     data() {
         return {
             items: [],
+            secilenLocation:"",
+            ind:""
         };
     },
     async created() {
@@ -35,11 +42,26 @@ export default {
             console.log(error);
         }
     },
+    methods: {
+        goLocation(maps,ind){
+         console.log(ind)
+         this.secilenLocation=maps;
+         console.log(this.secilenLocation)
+        }
+    }
 };
 </script>
 <style scoped>
   img {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+ul{
+    list-style: none;
+    width: 50%;
+    height: 50%;
+}
 </style>
