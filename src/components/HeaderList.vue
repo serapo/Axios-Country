@@ -8,7 +8,11 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <router-link 
+                    to="/"
+                    
+                    >Home
+                    </router-link> 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -28,6 +32,9 @@
 
 <script>
 
+export default {
+    
+}
 </script>
 
 <style scoped>
