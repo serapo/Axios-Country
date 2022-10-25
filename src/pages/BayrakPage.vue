@@ -9,7 +9,7 @@
                     <li><span>Region : </span>{{ item.region }}</li>
                     <br />
                     <li>
-                        <a type="button" class="btn btn-primary" :href="item.maps.googleMaps" target="_blank">Go
+                    <a type="button" class="btn btn-primary" :href="item.maps.googleMaps" target="_blank">Go
                             Location</a>
                     </li>
                     <maps-country-vue :secilenLocation="item.maps.googleMaps"></maps-country-vue>
@@ -22,11 +22,11 @@
 
 <script>
 import axios from "axios";
-import MapsCountryVue from "./MapsCountry.vue";
+
 export default {
     name: "App",
     components: {
-        MapsCountryVue,
+    
     },
     data() {
         return {
