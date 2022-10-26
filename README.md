@@ -4,6 +4,7 @@ Vue.js
 <li>Router</li>
 <li>Bootstrap</li>
 <li>Vuetify</li>
+<li>Filter</li>
 
 </br>
  
