@@ -126,4 +126,7 @@ li {
     width: 30rem;
 
 }
+input{
+    padding: 1rem;
+}
 </style>
