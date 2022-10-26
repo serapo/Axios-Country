@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "./pages/HomePage.vue";
 import Bayrak from './pages/BayrakPage.vue'
+
 //import About from "@/views/About.vue";
 
 const routes = [
@@ -20,7 +21,8 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  
 });
 
 export default router;
